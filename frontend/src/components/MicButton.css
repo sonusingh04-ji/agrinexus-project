@@ -1,0 +1,31 @@
+.mic-button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: none;
+  background: #2e7d32;
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.mic-button:active {
+  transform: scale(0.95);
+}
+
+.mic-button-listening {
+  background: #c62828;
+  animation: mic-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes mic-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(198, 40, 40, 0.5); }
+  50% { box-shadow: 0 0 0 20px rgba(198, 40, 40, 0); }
+}
+
+.mic-icon {
+  font-size: 48px;
+}

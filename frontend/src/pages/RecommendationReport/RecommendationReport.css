@@ -1,0 +1,554 @@
+/* =========================================================
+   Recommendation Report
+   ========================================================= */
+
+.report-container {
+  min-height: 100vh;
+  background: #f1f8f1;
+  padding: 28px 16px 100px;
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.report-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+
+.report-header-badge {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 12px;
+  border-radius: 20px;
+  background: #e8f5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+
+.report-title {
+  font-size: 28px;
+  line-height: 1.2;
+  color: #2e7d32;
+  text-align: center;
+  margin: 0 0 8px;
+  font-weight: 800;
+}
+
+
+.report-subtitle {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   Common Cards
+   ========================================================= */
+
+.report-loading-card,
+.report-error-card,
+.report-data-card,
+.report-detail-section,
+.report-provenance-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow:
+          0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   Loading
+   ========================================================= */
+
+.report-loading-card {
+  min-height: 150px;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: #666;
+  font-size: 17px;
+  gap: 10px;
+}
+
+
+.report-loading-icon {
+  font-size: 42px;
+  animation: reportPulse 1.5s ease-in-out infinite;
+}
+
+
+@keyframes reportPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   Error
+   ========================================================= */
+
+.report-error-card {
+  padding: 18px;
+  margin-bottom: 20px;
+
+  background: #fff4f2;
+  color: #a42929;
+
+  border: 1px solid #f3c5c0;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  line-height: 1.5;
+}
+
+
+.report-error-card strong {
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   Main Data Cards
+   ========================================================= */
+
+.report-data-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 18px;
+  margin-bottom: 14px;
+
+  border: 1px solid #e4eee2;
+}
+
+
+.report-data-card-icon {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  border-radius: 15px;
+
+  background: #eaf6e8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 29px;
+}
+
+
+.report-data-card-content {
+  min-width: 0;
+}
+
+
+.report-data-card-label {
+  color: #777;
+  font-size: 12px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+
+.report-data-card-value {
+  font-size: 23px;
+  font-weight: 800;
+  color: #2e7d32;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+
+.report-data-card-sub {
+  margin-top: 5px;
+  color: #777;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   Recommendation Section
+   ========================================================= */
+
+.report-recommendation-section {
+  margin: 24px 0;
+}
+
+
+.report-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 14px;
+}
+
+
+.report-section-heading span {
+  font-size: 21px;
+}
+
+
+.report-section-heading h2 {
+  margin: 0;
+  color: #222;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   Detail Sections
+   ========================================================= */
+
+.report-detail-section {
+  padding: 18px;
+  margin-bottom: 20px;
+
+  border: 1px solid #e4eee2;
+}
+
+
+.report-detail-section h2 {
+  margin: 0 0 16px;
+  color: #222;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   Detail Grid
+   ========================================================= */
+
+.report-detail-grid {
+  display: grid;
+  grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+  gap: 11px;
+}
+
+
+.report-detail-item {
+  background: #f6faf5;
+  border: 1px solid #e4eee2;
+
+  border-radius: 13px;
+
+  padding: 14px;
+  min-width: 0;
+}
+
+
+.report-detail-item span {
+  display: block;
+
+  color: #777;
+
+  font-size: 12px;
+
+  margin-bottom: 6px;
+
+  line-height: 1.4;
+}
+
+
+.report-detail-item strong {
+  display: block;
+
+  color: #222;
+
+  font-size: 18px;
+
+  line-height: 1.3;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   Crop History
+   ========================================================= */
+
+.report-history-list {
+  display: grid;
+  gap: 10px;
+}
+
+
+.report-history-item {
+  background: #f6faf5;
+
+  border: 1px solid #e4eee2;
+
+  border-radius: 13px;
+
+  padding: 14px;
+
+  display: grid;
+  gap: 5px;
+}
+
+
+.report-history-item strong {
+  color: #222;
+  font-size: 15px;
+}
+
+
+.report-history-item span {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   Data Provenance
+   ========================================================= */
+
+.report-provenance-card {
+  padding: 18px;
+  margin: 22px 0;
+
+  background: #f5f9f3;
+
+  border: 1px solid #d9ead5;
+}
+
+
+.report-provenance-card strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #2e7d32;
+
+  font-size: 15px;
+}
+
+
+.report-provenance-card p {
+  margin: 6px 0;
+
+  color: #666;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   Home Button
+   ========================================================= */
+
+.report-home-button {
+  width: 100%;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  padding: 14px 16px;
+
+  border-radius: 14px;
+
+  border: 2px solid #cfd8cf;
+
+  background: #ffffff;
+
+  color: #555;
+
+  cursor: pointer;
+
+  min-height: 52px;
+
+  transition:
+          background 0.2s ease,
+          border-color 0.2s ease,
+          transform 0.2s ease;
+}
+
+
+.report-home-button:hover {
+  background: #f7faf7;
+  border-color: #9db69d;
+}
+
+
+.report-home-button:active {
+  transform: scale(0.99);
+}
+
+
+.report-home-button:focus-visible {
+  outline: 3px solid #a5d6a7;
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (min-width: 701px) {
+
+  .report-container {
+    padding:
+            36px
+            24px
+            110px;
+  }
+
+
+  .report-title {
+    font-size: 32px;
+  }
+
+
+  .report-data-card {
+    padding: 20px;
+  }
+
+
+  .report-detail-section {
+    padding: 22px;
+  }
+
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .report-container {
+    padding:
+            22px
+            12px
+            95px;
+  }
+
+
+  .report-title {
+    font-size: 24px;
+  }
+
+
+  .report-subtitle {
+    font-size: 13px;
+  }
+
+
+  .report-data-card {
+    padding: 15px;
+    gap: 12px;
+  }
+
+
+  .report-data-card-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 25px;
+    border-radius: 13px;
+  }
+
+
+  .report-data-card-value {
+    font-size: 20px;
+  }
+
+
+  .report-detail-section {
+    padding: 15px;
+  }
+
+
+  .report-detail-section h2 {
+    font-size: 18px;
+  }
+
+
+  .report-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .report-detail-item {
+    padding: 13px;
+  }
+
+
+  .report-detail-item strong {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   Very Small Phones
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .report-container {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+
+  .report-data-card {
+    padding: 13px;
+  }
+
+
+  .report-data-card-value {
+    font-size: 18px;
+  }
+
+
+  .report-detail-section {
+    padding: 13px;
+  }
+
+}

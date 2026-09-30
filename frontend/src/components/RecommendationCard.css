@@ -1,0 +1,63 @@
+.rec-card {
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-left: 6px solid #2e7d32;
+}
+
+.rec-card-good {
+  border-left-color: #2e7d32;
+}
+
+.rec-card-warning {
+  border-left-color: #f9a825;
+}
+
+.rec-card-danger {
+  border-left-color: #c62828;
+}
+
+.rec-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.rec-card-icon {
+  font-size: 30px;
+}
+
+.rec-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+}
+
+.rec-card-summary {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.rec-card-why-toggle {
+  background: none;
+  border: none;
+  color: #2e7d32;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.rec-card-why-text {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}

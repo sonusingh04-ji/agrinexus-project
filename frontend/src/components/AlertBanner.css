@@ -1,0 +1,32 @@
+.alert-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #7a5c00;
+  border-left: 6px solid #f9a825;
+}
+
+.alert-danger {
+  background-color: #fdecea;
+  color: #7a1a1a;
+  border-left: 6px solid #c62828;
+}
+
+.alert-info {
+  background-color: #e3f2fd;
+  color: #0d3c61;
+  border-left: 6px solid #1976d2;
+}
+
+.alert-icon {
+  font-size: 22px;
+}

@@ -1,0 +1,1087 @@
+/* =========================================================
+   AgriNexus - Crop & Soil Analysis
+   ========================================================= */
+
+.crop-soil-analysis-page {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 28px 28px 110px;
+
+    background:
+            linear-gradient(
+                    180deg,
+                    #f7fbf7 0%,
+                    #eef7ef 100%
+            );
+
+    color: #17351f;
+
+    font-family:
+            Inter,
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            sans-serif;
+}
+
+
+/* =========================================================
+   Back button
+   ========================================================= */
+
+.crop-soil-analysis-back {
+    border: none;
+    background: transparent;
+
+    color: #28683a;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    padding: 8px 0;
+
+    margin-bottom: 18px;
+
+    transition:
+            color 0.2s ease,
+            transform 0.2s ease;
+}
+
+.crop-soil-analysis-back:hover {
+    color: #174d29;
+    transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.crop-soil-analysis-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 24px;
+
+    margin-bottom: 24px;
+
+    border-radius: 22px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ffffff 0%,
+                    #edf8ef 100%
+            );
+
+    border: 1px solid #dcecdf;
+
+    box-shadow:
+            0 10px 30px rgba(35, 82, 46, 0.08);
+}
+
+.crop-soil-analysis-header-icon {
+    width: 68px;
+    height: 68px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #dff1e2;
+
+    font-size: 34px;
+}
+
+.crop-soil-analysis-eyebrow {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #438151;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+.crop-soil-analysis-header h1 {
+    margin: 0;
+
+    color: #17351f;
+
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.crop-soil-analysis-header p {
+    margin: 8px 0 0;
+
+    color: #67816e;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   Sections
+   ========================================================= */
+
+.crop-soil-analysis-section {
+    margin-bottom: 22px;
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1ece3;
+
+    box-shadow:
+            0 7px 24px rgba(35, 82, 46, 0.06);
+}
+
+.crop-soil-analysis-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    margin-bottom: 18px;
+}
+
+.crop-soil-analysis-section h2 {
+    margin: 0;
+
+    color: #1c4828;
+
+    font-size: 20px;
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   Farm card
+   ========================================================= */
+
+.crop-soil-analysis-farm-card {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 17px;
+
+    border-radius: 15px;
+
+    background: #f3faf4;
+
+    border: 1px solid #dcecdf;
+}
+
+.crop-soil-analysis-farm-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #e2f2e5;
+
+    font-size: 25px;
+}
+
+.crop-soil-analysis-farm-card strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #234f2e;
+
+    font-size: 16px;
+}
+
+.crop-soil-analysis-farm-card span {
+    display: block;
+
+    color: #6d8372;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   Warning
+   ========================================================= */
+
+.crop-soil-analysis-warning {
+    margin-bottom: 22px;
+
+    padding: 14px 17px;
+
+    border-radius: 13px;
+
+    background: #fff8e7;
+
+    border: 1px solid #f0dfac;
+
+    color: #755a18;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   Soil condition
+   ========================================================= */
+
+.crop-soil-analysis-condition {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 32px;
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.crop-soil-analysis-condition.good {
+    background: #e4f5e7;
+    color: #26703a;
+}
+
+.crop-soil-analysis-condition.warning {
+    background: #fff0d5;
+    color: #956317;
+}
+
+.crop-soil-analysis-condition.unknown {
+    background: #edf0ee;
+    color: #68736b;
+}
+
+
+/* =========================================================
+   Soil summary grid
+   ========================================================= */
+
+.crop-soil-analysis-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 14px;
+}
+
+.crop-soil-analysis-card {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f5faf6
+            );
+
+    border: 1px solid #e2ece4;
+
+    transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+}
+
+.crop-soil-analysis-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+            0 8px 20px rgba(35, 82, 46, 0.08);
+}
+
+.crop-soil-analysis-card > span {
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.crop-soil-analysis-card small {
+    color: #718276;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.crop-soil-analysis-card strong {
+    margin-top: 6px;
+
+    color: #214e2b;
+
+    font-size: 22px;
+    line-height: 1.2;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   Empty state
+   ========================================================= */
+
+.crop-soil-analysis-empty {
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: #f7f9f7;
+
+    border: 1px dashed #ccd9ce;
+
+    color: #718076;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   Detailed data
+   ========================================================= */
+
+.crop-soil-analysis-detail-card {
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    border: 1px solid #e2ebe3;
+
+    background: #fbfdfb;
+}
+
+.crop-soil-analysis-detail-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(130px, 0.8fr)
+        minmax(0, 1.2fr);
+
+    gap: 18px;
+
+    padding: 14px 16px;
+
+    border-bottom: 1px solid #e9efea;
+}
+
+.crop-soil-analysis-detail-row:last-child {
+    border-bottom: none;
+}
+
+.crop-soil-analysis-detail-row span {
+    color: #6b7d70;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+.crop-soil-analysis-detail-row strong {
+    color: #244e2e;
+
+    font-size: 13px;
+
+    text-align: right;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   Recommendation card
+   ========================================================= */
+
+.crop-soil-analysis-recommendation-card {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 20px;
+
+    border-radius: 17px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #eff9f0,
+                    #e5f4e7
+            );
+
+    border: 1px solid #d3e9d6;
+}
+
+.crop-soil-analysis-recommendation-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #d7edd9;
+
+    font-size: 28px;
+}
+
+.crop-soil-analysis-recommendation-card small {
+    display: block;
+
+    color: #6a816f;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.crop-soil-analysis-recommendation-card strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #1e5c2e;
+
+    font-size: 20px;
+}
+
+.crop-soil-analysis-recommendation-card span {
+    display: inline-block;
+
+    margin-top: 7px;
+
+    color: #4e7658;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   Advice
+   ========================================================= */
+
+.crop-soil-analysis-advice {
+    margin-top: 15px;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    background: #fafcf9;
+
+    border-left: 4px solid #6eaa78;
+}
+
+.crop-soil-analysis-advice strong {
+    color: #315e3a;
+
+    font-size: 13px;
+}
+
+.crop-soil-analysis-advice p {
+    margin: 8px 0 0;
+
+    color: #66776b;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   Crop selector
+   ========================================================= */
+
+.crop-soil-analysis-crop-selector {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.crop-soil-analysis-crop-selector label {
+    color: #4e6555;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.crop-soil-analysis-crop-selector select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 14px;
+
+    border-radius: 12px;
+
+    border: 1px solid #d5e2d7;
+
+    background: #ffffff;
+
+    color: #23472b;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+}
+
+.crop-soil-analysis-crop-selector select:focus {
+    border-color: #6aa575;
+
+    box-shadow:
+            0 0 0 3px rgba(
+                    106,
+                    165,
+                    117,
+                    0.12
+            );
+}
+
+
+/* =========================================================
+   Selected crop
+   ========================================================= */
+
+.crop-soil-analysis-selected-crop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 14px;
+
+    padding: 14px 16px;
+
+    border-radius: 13px;
+
+    background: #f1f8f2;
+
+    border: 1px solid #dceade;
+}
+
+.crop-soil-analysis-selected-crop strong {
+    color: #52705a;
+
+    font-size: 13px;
+}
+
+.crop-soil-analysis-selected-crop span {
+    color: #245b31;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   Soil trend
+   ========================================================= */
+
+.crop-soil-analysis-trend-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 14px;
+}
+
+.crop-soil-analysis-trend-card {
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    border: 1px solid #e0eae2;
+
+    background: #fbfdfb;
+}
+
+.crop-soil-analysis-trend-row {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 12px 14px;
+
+    border-bottom: 1px solid #e9efea;
+}
+
+.crop-soil-analysis-trend-row:last-child {
+    border-bottom: none;
+}
+
+.crop-soil-analysis-trend-row span {
+    color: #718076;
+
+    font-size: 12px;
+
+    overflow-wrap: anywhere;
+}
+
+.crop-soil-analysis-trend-row strong {
+    color: #315d3a;
+
+    font-size: 12px;
+
+    text-align: right;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   Recovery plan
+   ========================================================= */
+
+.crop-soil-analysis-recovery-card {
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    border: 1px solid #dfeae1;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #f7fcf7,
+                    #eef8ef
+            );
+}
+
+
+/* =========================================================
+   Action buttons
+   ========================================================= */
+
+.crop-soil-analysis-actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.crop-soil-analysis-primary-button,
+.crop-soil-analysis-secondary-button {
+    min-height: 50px;
+
+    border-radius: 13px;
+
+    padding: 12px 16px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease;
+}
+
+.crop-soil-analysis-primary-button {
+    border: 1px solid #286b38;
+
+    background: #286b38;
+
+    color: #ffffff;
+
+    box-shadow:
+            0 6px 15px rgba(
+                    40,
+                    107,
+                    56,
+                    0.18
+            );
+}
+
+.crop-soil-analysis-secondary-button {
+    border: 1px solid #cfe1d2;
+
+    background: #ffffff;
+
+    color: #2d6338;
+}
+
+.crop-soil-analysis-primary-button:hover,
+.crop-soil-analysis-secondary-button:hover {
+    transform: translateY(-2px);
+}
+
+.crop-soil-analysis-primary-button:hover {
+    background: #215c30;
+}
+
+.crop-soil-analysis-secondary-button:hover {
+    background: #f2f8f3;
+}
+
+
+/* =========================================================
+   Loading
+   ========================================================= */
+
+.crop-soil-analysis-loading {
+    min-height: calc(100vh - 150px);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.crop-soil-analysis-loading-icon {
+    width: 82px;
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 24px;
+
+    background: #e2f2e5;
+
+    font-size: 40px;
+
+    animation:
+            crop-soil-analysis-pulse
+            1.5s
+            ease-in-out
+            infinite;
+}
+
+.crop-soil-analysis-loading h2 {
+    margin: 0;
+
+    color: #24552e;
+
+    font-size: 23px;
+}
+
+.crop-soil-analysis-loading p {
+    max-width: 520px;
+
+    margin: 10px 0 0;
+
+    color: #6c7e70;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   Error
+   ========================================================= */
+
+.crop-soil-analysis-error {
+    min-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e9e1;
+
+    box-shadow:
+            0 10px 30px rgba(
+                    35,
+                    82,
+                    46,
+                    0.06
+            );
+}
+
+.crop-soil-analysis-error-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 20px;
+
+    background: #fff3d9;
+
+    font-size: 32px;
+}
+
+.crop-soil-analysis-error h2 {
+    margin: 0;
+
+    color: #2b5133;
+
+    font-size: 23px;
+}
+
+.crop-soil-analysis-error p {
+    max-width: 480px;
+
+    margin: 10px 0 20px;
+
+    color: #718077;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   Animation
+   ========================================================= */
+
+@keyframes crop-soil-analysis-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.06);
+        opacity: 0.75;
+    }
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .crop-soil-analysis-page {
+        padding: 22px 20px 105px;
+    }
+
+    .crop-soil-analysis-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+    .crop-soil-analysis-actions {
+        grid-template-columns:
+            1fr;
+    }
+
+    .crop-soil-analysis-trend-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 600px) {
+    .crop-soil-analysis-page {
+        padding: 16px 14px 100px;
+    }
+
+    .crop-soil-analysis-header {
+        align-items: flex-start;
+
+        padding: 18px;
+
+        border-radius: 18px;
+    }
+
+    .crop-soil-analysis-header-icon {
+        width: 52px;
+        height: 52px;
+
+        border-radius: 14px;
+
+        font-size: 26px;
+    }
+
+    .crop-soil-analysis-header h1 {
+        font-size: 23px;
+    }
+
+    .crop-soil-analysis-header p {
+        font-size: 13px;
+    }
+
+    .crop-soil-analysis-section {
+        padding: 17px;
+
+        border-radius: 17px;
+    }
+
+    .crop-soil-analysis-section-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .crop-soil-analysis-section h2 {
+        font-size: 18px;
+    }
+
+    .crop-soil-analysis-grid {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .crop-soil-analysis-card {
+        padding: 15px;
+    }
+
+    .crop-soil-analysis-detail-row {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+    }
+
+    .crop-soil-analysis-detail-row strong {
+        text-align: left;
+    }
+
+    .crop-soil-analysis-recommendation-card {
+        align-items: flex-start;
+
+        padding: 16px;
+    }
+
+    .crop-soil-analysis-selected-crop {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .crop-soil-analysis-selected-crop span {
+        text-align: left;
+    }
+
+    .crop-soil-analysis-trend-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .crop-soil-analysis-trend-row strong {
+        text-align: left;
+    }
+
+    .crop-soil-analysis-loading {
+        min-height: 70vh;
+    }
+}
+
+
+/* =========================================================
+   Small mobile
+   ========================================================= */
+
+@media (max-width: 380px) {
+    .crop-soil-analysis-page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .crop-soil-analysis-header {
+        gap: 12px;
+    }
+
+    .crop-soil-analysis-header h1 {
+        font-size: 21px;
+    }
+
+    .crop-soil-analysis-eyebrow {
+        font-size: 9px;
+    }
+}

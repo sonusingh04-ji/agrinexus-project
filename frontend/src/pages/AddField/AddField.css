@@ -1,0 +1,822 @@
+/* =========================================================
+   Add Field / Farm Registration
+   ========================================================= */
+
+.add-field-container {
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  background:
+          radial-gradient(
+                  circle at top right,
+                  rgba(76, 175, 80, 0.08),
+                  transparent 32%
+          ),
+          #f1f8f1;
+
+  padding: 32px 20px 110px;
+  color: #252525;
+}
+
+.add-field-container > * {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.add-field-title {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  color: #24752b;
+}
+
+.add-field-subtitle {
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  text-align: center;
+
+  color: #6f7b70;
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   Error
+   ========================================================= */
+
+.add-field-error {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  margin-bottom: 20px;
+
+  padding: 14px 16px;
+
+  background: #fff3f2;
+
+  border: 1px solid #f3b5b0;
+  border-left: 5px solid #d32f2f;
+
+  border-radius: 14px;
+
+  color: #b3261e;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   Form Sections
+   ========================================================= */
+
+.add-field-section {
+  width: 100%;
+  box-sizing: border-box;
+
+  margin-bottom: 20px;
+
+  padding: 22px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid #e4ebe3;
+
+  border-radius: 18px;
+
+  box-shadow:
+          0 5px 18px rgba(46, 125, 50, 0.06);
+}
+
+.add-field-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #2d332e;
+
+  font-size: 16px;
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   Text / Select / Date
+   ========================================================= */
+
+.add-field-input {
+  width: 100%;
+  min-height: 52px;
+
+  box-sizing: border-box;
+
+  padding: 13px 15px;
+
+  border: 2px solid #d9dfda;
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  color: #252525;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  transition:
+          border-color 0.18s ease,
+          box-shadow 0.18s ease,
+          background 0.18s ease;
+}
+
+.add-field-input:hover {
+  border-color: #a7b9aa;
+}
+
+.add-field-input:focus {
+  outline: none;
+
+  border-color: #2e7d32;
+
+  box-shadow:
+          0 0 0 4px rgba(46, 125, 50, 0.10);
+}
+
+.add-field-input::placeholder {
+  color: #9aa29b;
+}
+
+
+/* =========================================================
+   Select styling
+   ========================================================= */
+
+select.add-field-input {
+  appearance: none;
+
+  padding-right: 44px;
+
+  cursor: pointer;
+
+  background-image:
+          linear-gradient(
+                  45deg,
+                  transparent 50%,
+                  #5f6b61 50%
+          ),
+          linear-gradient(
+                  135deg,
+                  #5f6b61 50%,
+                  transparent 50%
+          );
+
+  background-position:
+          calc(100% - 19px) 22px,
+          calc(100% - 13px) 22px;
+
+  background-size:
+          6px 6px,
+          6px 6px;
+
+  background-repeat: no-repeat;
+}
+
+select.add-field-input:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   Date
+   ========================================================= */
+
+input[type="date"].add-field-input {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   Crop Picker Section
+   ========================================================= */
+
+.add-field-section:has(.crop-picker-wrapper) {
+  padding-bottom: 20px;
+}
+
+
+/* =========================================================
+   Location
+   ========================================================= */
+
+.location-button {
+  width: 100%;
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  box-sizing: border-box;
+
+  padding: 13px 16px;
+
+  border: 2px dashed #4a9450;
+  border-radius: 14px;
+
+  background: #f8fcf7;
+
+  color: #2e7d32;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+          background 0.18s ease,
+          border-color 0.18s ease,
+          transform 0.18s ease;
+}
+
+.location-button:hover:not(:disabled) {
+  background: #edf8ec;
+  border-color: #2e7d32;
+}
+
+.location-button:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.location-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   Location Preview
+   ========================================================= */
+
+.add-field-location-preview {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 12px;
+}
+
+.add-field-location-preview > div {
+  padding: 13px 15px;
+
+  border-radius: 13px;
+
+  background: #edf7ec;
+
+  border: 1px solid #d8ebd6;
+}
+
+.add-field-location-preview span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #718072;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.add-field-location-preview strong {
+  display: block;
+
+  color: #2e7d32;
+
+  font-size: 15px;
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   Slider area
+   ========================================================= */
+
+.add-field-section .big-slider,
+.add-field-section input[type="range"] {
+  width: 100%;
+}
+
+
+/* =========================================================
+   Primary Button
+   ========================================================= */
+
+.add-field-save-button {
+  width: 100%;
+  min-height: 60px;
+
+  margin-top: 8px;
+  margin-bottom: 12px;
+
+  border: none;
+  border-radius: 16px;
+
+  background:
+          linear-gradient(
+                  135deg,
+                  #2e7d32,
+                  #24752b
+          );
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+          0 8px 18px rgba(46, 125, 50, 0.22);
+
+  transition:
+          transform 0.16s ease,
+          box-shadow 0.16s ease,
+          opacity 0.16s ease;
+}
+
+.add-field-save-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  box-shadow:
+          0 10px 23px rgba(46, 125, 50, 0.28);
+}
+
+.add-field-save-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.add-field-save-button.disabled,
+.add-field-save-button:disabled {
+  background: #aeb5ae;
+
+  box-shadow: none;
+
+  cursor: not-allowed;
+
+  opacity: 0.72;
+}
+
+
+/* =========================================================
+   Cancel Button
+   ========================================================= */
+
+.add-field-cancel-button {
+  width: 100%;
+  min-height: 54px;
+
+  border: 2px solid #d1d6d1;
+  border-radius: 15px;
+
+  background: white;
+
+  color: #5d655e;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+          border-color 0.16s ease,
+          color 0.16s ease,
+          background 0.16s ease;
+}
+
+.add-field-cancel-button:hover:not(:disabled) {
+  border-color: #2e7d32;
+  color: #2e7d32;
+  background: #f8fcf7;
+}
+
+.add-field-cancel-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   Crop Picker Improvements
+   ========================================================= */
+
+.crop-picker-wrapper {
+  width: 100%;
+}
+
+
+/* Search */
+
+.crop-picker-search-wrapper {
+  position: relative;
+
+  margin-bottom: 8px;
+}
+
+.crop-picker-search-icon {
+  position: absolute;
+
+  left: 15px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 15px;
+
+  pointer-events: none;
+}
+
+.crop-picker-search {
+  width: 100%;
+
+  min-height: 50px;
+
+  box-sizing: border-box;
+
+  padding:
+          12px
+          14px
+          12px
+          43px;
+
+  border:
+          2px solid
+          #d9dfda;
+
+  border-radius: 13px;
+
+  background: white;
+
+  color: #333;
+
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.crop-picker-search:focus {
+  outline: none;
+
+  border-color: #2e7d32;
+
+  box-shadow:
+          0 0 0 4px
+          rgba(46, 125, 50, 0.08);
+}
+
+
+/* Count */
+
+.crop-picker-count {
+  margin:
+          8px
+          2px
+          12px;
+
+  color: #788178;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   Crop Grid
+   ========================================================= */
+
+.crop-picker-grid {
+  display: grid;
+
+  grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+
+  /*
+   * Keeps Add Farm compact even with
+   * 65+ backend crops.
+   */
+  max-height: 470px;
+
+  overflow-y: auto;
+
+  padding-right: 4px;
+}
+
+
+/* Scrollbar */
+
+.crop-picker-grid::-webkit-scrollbar {
+  width: 7px;
+}
+
+.crop-picker-grid::-webkit-scrollbar-track {
+  background: #eef3ed;
+
+  border-radius: 20px;
+}
+
+.crop-picker-grid::-webkit-scrollbar-thumb {
+  background: #b9ccb9;
+
+  border-radius: 20px;
+}
+
+
+/* Crop card */
+
+.crop-picker-item {
+  position: relative;
+
+  min-height: 105px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 14px 8px;
+
+  border:
+          2px solid
+          #dde2dd;
+
+  border-radius: 15px;
+
+  background: white;
+
+  color: #323632;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+          border-color 0.16s ease,
+          background 0.16s ease,
+          transform 0.16s ease,
+          box-shadow 0.16s ease;
+}
+
+.crop-picker-item:hover {
+  border-color: #64a968;
+
+  background: #fbfefb;
+
+  transform: translateY(-1px);
+}
+
+.crop-picker-item-selected {
+  border-color: #2e7d32 !important;
+
+  background: #eaf6e8 !important;
+
+  color: #246d28;
+
+  box-shadow:
+          0 0 0 3px
+          rgba(46, 125, 50, 0.08);
+}
+
+.crop-picker-icon {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 29px;
+
+  line-height: 1;
+}
+
+.crop-picker-name {
+  display: block;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  line-height: 1.2;
+}
+
+.crop-picker-season {
+  display: block;
+
+  margin-top: 5px;
+
+  max-width: 92%;
+
+  text-align: center;
+
+  color: #7b847c;
+
+  font-size: 10px;
+
+  line-height: 1.25;
+}
+
+.crop-picker-check {
+  position: absolute;
+
+  top: 7px;
+  right: 7px;
+
+  width: 21px;
+  height: 21px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #2e7d32;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   Loading / Error
+   ========================================================= */
+
+.crop-picker-loading {
+  min-height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border-radius: 14px;
+
+  background: #fafdf9;
+
+  color: #717871;
+
+  font-size: 14px;
+}
+
+.crop-picker-loading-icon {
+  font-size: 22px;
+}
+
+.crop-picker-error {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  padding: 13px;
+
+  border-left:
+          4px solid
+          #d32f2f;
+
+  border-radius: 12px;
+
+  background: #fff3f2;
+
+  color: #b3261e;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+}
+
+.crop-picker-no-results {
+  min-height: 120px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border-radius: 13px;
+
+  background: #fafafa;
+
+  color: #7b817b;
+}
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .add-field-container {
+    padding:
+            24px
+            14px
+            100px;
+  }
+
+  .add-field-section {
+    padding: 18px;
+  }
+
+  .crop-picker-grid {
+    grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    max-height: 430px;
+  }
+}
+
+
+@media (max-width: 520px) {
+
+  .add-field-title {
+    font-size: 28px;
+  }
+
+  .add-field-subtitle {
+    font-size: 13px;
+  }
+
+  .add-field-section {
+    padding: 15px;
+
+    border-radius: 15px;
+  }
+
+  .add-field-location-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .crop-picker-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    max-height: 390px;
+  }
+
+  .crop-picker-item {
+    min-height: 92px;
+  }
+
+  .crop-picker-icon {
+    font-size: 25px;
+  }
+
+  .crop-picker-name {
+    font-size: 13px;
+  }
+
+  .add-field-save-button {
+    min-height: 56px;
+
+    font-size: 17px;
+  }
+}

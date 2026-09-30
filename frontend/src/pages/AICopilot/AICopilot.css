@@ -1,0 +1,77 @@
+.copilot-container {
+  min-height: 100vh;
+  background-color: #f1f8f1;
+  padding: 24px 16px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copilot-title {
+  font-size: 22px;
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.copilot-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.copilot-hint {
+  margin-top: 16px;
+  font-size: 15px;
+  color: #666;
+}
+
+.copilot-qa-box {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.copilot-qa-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.copilot-question p {
+  font-size: 16px;
+  color: #222;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.copilot-loading {
+  font-size: 15px;
+  color: #2e7d32;
+  font-style: italic;
+}
+
+.copilot-answer p {
+  font-size: 17px;
+  color: #222;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.copilot-replay {
+  margin-top: 12px;
+  background: #e8f5e9;
+  border: none;
+  color: #2e7d32;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}

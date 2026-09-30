@@ -1,0 +1,702 @@
+.nutrient-page {
+    min-height: 100vh;
+    padding: 32px 32px 120px;
+    background:
+            radial-gradient(
+                    circle at top right,
+                    rgba(49, 140, 75, 0.12),
+                    transparent 32%
+            ),
+            #f3f8f3;
+    color: #183b25;
+}
+
+.nutrient-hero {
+    max-width: 1500px;
+    margin: 0 auto 24px;
+    min-height: 300px;
+    padding: 52px;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    color: white;
+    background:
+            radial-gradient(
+                    circle at 100% 0%,
+                    rgba(122, 188, 139, 0.45),
+                    transparent 32%
+            ),
+            linear-gradient(
+                    135deg,
+                    #0a4828,
+                    #287c43
+            );
+    box-shadow:
+            0 28px 70px rgba(20, 80, 40, 0.16);
+}
+
+.nutrient-eyebrow {
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    opacity: 0.75;
+}
+
+.nutrient-hero h1 {
+    margin: 0;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+}
+
+.nutrient-hero p {
+    max-width: 760px;
+    margin: 24px 0 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nutrient-hero-icon {
+    width: 130px;
+    height: 130px;
+    flex: 0 0 130px;
+    display: grid;
+    place-items: center;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 58px;
+    backdrop-filter: blur(14px);
+}
+
+.nutrient-farm-bar {
+    max-width: 1500px;
+    margin: 0 auto 24px;
+    padding: 22px 26px;
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid #dce8df;
+    box-shadow: 0 14px 40px rgba(20, 60, 30, 0.06);
+}
+
+.nutrient-farm-icon {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    border-radius: 18px;
+    background: #eaf6ed;
+    font-size: 28px;
+}
+
+.nutrient-farm-bar > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+}
+
+.nutrient-farm-bar span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #779080;
+}
+
+.nutrient-farm-bar strong {
+    font-size: 20px;
+}
+
+.nutrient-farm-bar small {
+    color: #829189;
+}
+
+.nutrient-farm-bar button {
+    border: 1px solid #cde0d2;
+    background: white;
+    color: #23743a;
+    border-radius: 14px;
+    padding: 12px 18px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.nutrient-error {
+    max-width: 1500px;
+    margin: 0 auto 24px;
+    padding: 16px 20px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border-radius: 18px;
+    background: #fff7df;
+    border: 1px solid #efdca0;
+    color: #725c18;
+}
+
+.nutrient-context-grid {
+    max-width: 1500px;
+    margin: 0 auto 34px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.nutrient-context-card {
+    padding: 24px;
+    border-radius: 22px;
+    background: white;
+    border: 1px solid #dce8df;
+    box-shadow: 0 12px 34px rgba(20, 70, 30, 0.05);
+}
+
+.nutrient-context-card span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #799184;
+}
+
+.nutrient-context-card strong {
+    display: block;
+    font-size: 22px;
+}
+
+.nutrient-context-card small {
+    display: block;
+    margin-top: 5px;
+    color: #89958e;
+}
+
+.nutrient-section {
+    max-width: 1500px;
+    margin: 0 auto 34px;
+}
+
+.nutrient-section-heading {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 24px;
+}
+
+.nutrient-section-heading span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #729080;
+}
+
+.nutrient-section-heading h2 {
+    margin: 7px 0 5px;
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+.nutrient-section-heading p {
+    margin: 0;
+    color: #829088;
+}
+
+.nutrient-record-badge {
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: #eaf7ed;
+    color: #28743d;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.nutrient-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.nutrient-card {
+    min-height: 190px;
+    padding: 22px;
+    border-radius: 24px;
+    background: white;
+    border: 1px solid #dce8df;
+    box-shadow: 0 14px 40px rgba(20, 70, 30, 0.06);
+}
+
+.nutrient-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.nutrient-card-top > span {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #edf7ef;
+    font-weight: 900;
+    color: #287b41;
+}
+
+.nutrient-card-top small {
+    color: #829088;
+    font-weight: 700;
+}
+
+.nutrient-card > strong {
+    display: block;
+    margin-top: 30px;
+    font-size: 34px;
+    letter-spacing: -1px;
+}
+
+.nutrient-status {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 9px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    background: #f0f4f1;
+    color: #7a887f;
+}
+
+.nutrient-card.positive {
+    border-top: 4px solid #358b4b;
+}
+
+.nutrient-card.negative {
+    border-top: 4px solid #d64d4d;
+}
+
+.nutrient-card.balanced {
+    border-top: 4px solid #609b74;
+}
+
+.nutrient-flow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.nutrient-flow-card {
+    padding: 24px;
+    border-radius: 24px;
+    background: white;
+    border: 1px solid #dce8df;
+    box-shadow: 0 12px 34px rgba(20, 70, 30, 0.05);
+}
+
+.nutrient-flow-card h3 {
+    margin: 0 0 18px;
+    font-size: 18px;
+}
+
+.nutrient-flow-card > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #edf2ee;
+}
+
+.nutrient-flow-card > div:last-child {
+    border-bottom: none;
+}
+
+.nutrient-flow-card > div span {
+    color: #7d8c83;
+    font-weight: 800;
+}
+
+.nutrient-flow-card > div strong {
+    font-size: 16px;
+}
+
+.nutrient-single-value {
+    padding: 18px !important;
+    border-radius: 16px;
+    background: #f4f9f5;
+    border-bottom: none !important;
+}
+
+.nutrient-flow-card p {
+    margin: 16px 0 0;
+    color: #85918b;
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+.nutrient-explanation {
+    max-width: 1500px;
+    margin: 0 auto 34px;
+    padding: 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    border-radius: 26px;
+    background: linear-gradient(
+            135deg,
+            #f5fbf6,
+            #edf7ef
+    );
+    border: 1px solid #d8e9dc;
+}
+
+.nutrient-explanation-icon {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: white;
+    font-size: 24px;
+}
+
+.nutrient-explanation span {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #63816c;
+}
+
+.nutrient-explanation h2 {
+    margin: 6px 0;
+}
+
+.nutrient-explanation p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.nutrient-explanation small {
+    display: block;
+    margin-top: 8px;
+    color: #75867b;
+    line-height: 1.6;
+}
+
+.nutrient-meta {
+    max-width: 1500px;
+    margin: 0 auto 34px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.nutrient-meta > div {
+    padding: 20px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #dce8df;
+}
+
+.nutrient-meta span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #7d8e84;
+}
+
+.nutrient-history-empty,
+.nutrient-history-list {
+    padding: 22px;
+    border-radius: 24px;
+    background: white;
+    border: 1px solid #dce8df;
+}
+
+.nutrient-history-empty {
+    text-align: center;
+    padding: 48px;
+}
+
+.nutrient-history-empty h3 {
+    margin-bottom: 8px;
+}
+
+.nutrient-history-empty p {
+    margin: 0;
+    color: #839088;
+}
+
+.nutrient-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nutrient-history-card {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr auto;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid #edf2ee;
+    border-radius: 18px;
+}
+
+.nutrient-history-card > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nutrient-history-card small {
+    color: #8b958f;
+}
+
+.nutrient-history-values {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    color: #56685d;
+}
+
+.nutrient-history-values span {
+    padding: 7px 9px;
+    border-radius: 10px;
+    background: #f3f7f4;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.nutrient-history-status {
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #edf4ee;
+    color: #55705c;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.nutrient-history-status.negative {
+    background: #fff0f0;
+    color: #a84848;
+}
+
+.nutrient-history-status.positive {
+    background: #edf8ef;
+    color: #2c7c43;
+}
+
+.nutrient-empty {
+    max-width: 1500px;
+    margin: 0 auto 34px;
+    padding: 80px 30px;
+    border-radius: 30px;
+    text-align: center;
+    background: white;
+    border: 1px solid #dce8df;
+}
+
+.nutrient-empty > div {
+    font-size: 48px;
+}
+
+.nutrient-empty h2 {
+    margin: 18px 0 8px;
+}
+
+.nutrient-empty p {
+    margin: 0;
+    color: #84918a;
+}
+
+.nutrient-footer-note {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #d7e7da;
+    background: #f3faf4;
+}
+
+.nutrient-footer-note > span {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #e3f3e6;
+    color: #28783e;
+    font-weight: 900;
+}
+
+.nutrient-footer-note strong {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.nutrient-footer-note p {
+    margin: 0;
+    color: #7a897f;
+    font-size: 13px;
+}
+
+.nutrient-loading {
+    min-height: 60vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.nutrient-loading-spinner {
+    width: 44px;
+    height: 44px;
+    border: 4px solid #dce9df;
+    border-top-color: #2d8144;
+    border-radius: 50%;
+    animation: nutrientSpin 0.8s linear infinite;
+    margin-bottom: 18px;
+}
+
+.nutrient-loading p {
+    color: #829088;
+}
+
+@keyframes nutrientSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .nutrient-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .nutrient-flow-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 780px) {
+
+    .nutrient-page {
+        padding: 18px 14px 110px;
+    }
+
+    .nutrient-hero {
+        padding: 32px 24px;
+        border-radius: 24px;
+    }
+
+    .nutrient-hero-icon {
+        display: none;
+    }
+
+    .nutrient-farm-bar {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .nutrient-farm-bar button {
+        width: 100%;
+    }
+
+    .nutrient-context-grid,
+    .nutrient-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .nutrient-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .nutrient-flow-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nutrient-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nutrient-history-card {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .nutrient-hero h1 {
+        font-size: 42px;
+    }
+
+    .nutrient-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nutrient-card {
+        min-height: auto;
+    }
+
+}
+.nutrient-section + .nutrient-section {
+    margin-top: 34px;
+}
+
+.nutrient-empty > div[style] {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nutrient-empty > div[style] p {
+    color: #718078;
+    line-height: 1.7;
+}
+
+.nutrient-context-card strong {
+    word-break: break-word;
+}
+
+.nutrient-history-values {
+    justify-content: flex-start;
+}
+
+@media (max-width: 900px) {
+    .nutrient-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .nutrient-grid {
+        grid-template-columns: 1fr;
+    }
+}

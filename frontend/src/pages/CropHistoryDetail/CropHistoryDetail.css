@@ -1,0 +1,947 @@
+.crop-history-detail-page {
+    min-height: 100vh;
+    background: #f3f8f1;
+    padding: 18px 16px 110px;
+    box-sizing: border-box;
+}
+
+.crop-history-detail-back {
+    border: none;
+    background: transparent;
+    color: #2e7d32;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 0;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+/* =========================================================
+   Hero
+   ========================================================= */
+
+.crop-history-detail-hero {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.crop-history-detail-hero-icon {
+    width: 68px;
+    height: 68px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #e8f5e9;
+    border-radius: 18px;
+    font-size: 38px;
+}
+
+.crop-history-detail-label {
+    color: #7a7a7a;
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.crop-history-detail-hero-content h1 {
+    margin: 0;
+    color: #1f5f26;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.crop-history-detail-season {
+    margin-top: 7px;
+    color: #2e7d32;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.crop-history-detail-farm {
+    margin-top: 5px;
+    color: #777;
+    font-size: 12px;
+}
+
+/* =========================================================
+   Sections
+   ========================================================= */
+
+.crop-history-detail-section {
+    margin-bottom: 22px;
+}
+
+.crop-history-detail-section h2 {
+    margin: 0 0 12px;
+    color: #222;
+    font-size: 20px;
+}
+
+/* =========================================================
+   Period
+   ========================================================= */
+
+.crop-history-detail-period {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.crop-history-detail-period-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.crop-history-detail-period-item > span {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #edf7eb;
+    font-size: 20px;
+}
+
+.crop-history-detail-period-item small {
+    display: block;
+    color: #777;
+    font-size: 11px;
+}
+
+.crop-history-detail-period-item strong {
+    display: block;
+    margin-top: 3px;
+    color: #222;
+    font-size: 14px;
+}
+
+.crop-history-detail-period-arrow {
+    color: #8a8a8a;
+    font-size: 20px;
+}
+
+/* =========================================================
+   Grid
+   ========================================================= */
+
+.crop-history-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.crop-history-detail-card {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.crop-history-detail-card-icon {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.crop-history-detail-card small {
+    display: block;
+    color: #777;
+    font-size: 11px;
+}
+
+.crop-history-detail-card strong {
+    display: block;
+    margin-top: 4px;
+    color: #222;
+    font-size: 16px;
+}
+
+/* =========================================================
+   Info card
+   ========================================================= */
+
+.crop-history-detail-info-card {
+    background: white;
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.crop-history-detail-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 15px 17px;
+    border-bottom: 1px solid #edf1eb;
+}
+
+.crop-history-detail-info-row:last-child {
+    border-bottom: none;
+}
+
+.crop-history-detail-info-row span {
+    color: #777;
+    font-size: 13px;
+}
+
+.crop-history-detail-info-row strong {
+    color: #222;
+    font-size: 13px;
+    text-align: right;
+}
+
+.crop-history-detail-id {
+    max-width: 60%;
+    overflow-wrap: anywhere;
+    font-size: 11px !important;
+    color: #666 !important;
+}
+
+/* =========================================================
+   Notes
+   ========================================================= */
+
+.crop-history-detail-notes-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: white;
+    border-radius: 17px;
+    padding: 17px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.crop-history-detail-notes-icon {
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.crop-history-detail-notes-card p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.crop-history-detail-empty {
+    background: white;
+    border-radius: 17px;
+    padding: 18px;
+    color: #777;
+    font-size: 13px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================================
+   Actions
+   ========================================================= */
+
+.crop-history-detail-actions {
+    display: grid;
+    gap: 11px;
+    margin-top: 26px;
+}
+
+.crop-history-detail-primary-button,
+.crop-history-detail-secondary-button {
+    width: 100%;
+    border-radius: 14px;
+    padding: 15px 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.crop-history-detail-primary-button {
+    border: none;
+    background: #2e7d32;
+    color: white;
+}
+
+.crop-history-detail-primary-button:hover {
+    background: #246428;
+}
+
+.crop-history-detail-secondary-button {
+    border: 2px solid #2e7d32;
+    background: white;
+    color: #2e7d32;
+}
+
+/* =========================================================
+   Loading
+   ========================================================= */
+
+.crop-history-detail-loading {
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.crop-history-detail-loading-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.crop-history-detail-loading h2 {
+    margin: 0 0 6px;
+    color: #2e7d32;
+    font-size: 21px;
+}
+
+.crop-history-detail-loading p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+/* =========================================================
+   Error
+   ========================================================= */
+
+.crop-history-detail-error {
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.crop-history-detail-error-icon {
+    font-size: 50px;
+    margin-bottom: 8px;
+}
+
+.crop-history-detail-error h2 {
+    margin: 0 0 7px;
+    color: #222;
+}
+
+.crop-history-detail-error p {
+    max-width: 400px;
+    margin: 0 0 18px;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 600px) {
+    .crop-history-detail-page {
+        padding: 14px 14px 105px;
+    }
+
+    .crop-history-detail-hero {
+        padding: 16px;
+    }
+
+    .crop-history-detail-hero-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 32px;
+    }
+
+    .crop-history-detail-hero-content h1 {
+        font-size: 24px;
+    }
+
+    .crop-history-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .crop-history-detail-period {
+        padding: 15px;
+    }
+
+    .crop-history-detail-period-item strong {
+        font-size: 13px;
+    }
+
+    .crop-history-detail-info-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .crop-history-detail-info-row strong {
+        text-align: left;
+    }
+
+    .crop-history-detail-id {
+        max-width: 100%;
+    }
+}
+/* =========================================================
+   Current Farm Data Notice
+   ========================================================= */
+
+.crop-history-detail-current-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #eef6ff;
+    border: 1px solid #cddff4;
+    border-radius: 17px;
+    padding: 16px;
+    margin-bottom: 22px;
+}
+
+.crop-history-detail-current-banner-icon {
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.crop-history-detail-current-banner strong {
+    display: block;
+    color: #24517a;
+    font-size: 14px;
+}
+
+.crop-history-detail-current-banner p {
+    margin: 5px 0 0;
+    color: #5f7180;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   Related data status
+   ========================================================= */
+
+.crop-history-detail-related-loading {
+    background: white;
+    border-radius: 15px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    color: #666;
+    text-align: center;
+    font-size: 13px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.crop-history-detail-related-warning {
+    background: #fff8e7;
+    border: 1px solid #edd9a0;
+    color: #765d1d;
+    border-radius: 15px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   Improve detail values
+   ========================================================= */
+
+.crop-history-detail-info-row strong {
+    max-width: 65%;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   Current data cards
+   ========================================================= */
+
+.crop-history-detail-section
+.crop-history-detail-card {
+    transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+}
+
+.crop-history-detail-section
+.crop-history-detail-card:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .crop-history-detail-current-banner {
+        padding: 14px;
+    }
+
+    .crop-history-detail-info-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .crop-history-detail-info-row strong {
+        max-width: 100%;
+        text-align: left;
+    }
+}
+/* =========================================================
+   Section Header
+   ========================================================= */
+
+.crop-history-detail-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.crop-history-detail-count-badge {
+    min-width: 28px;
+    height: 28px;
+    padding: 0 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   Weather Risk List
+   ========================================================= */
+
+.crop-history-detail-risk-list {
+    display: grid;
+    gap: 12px;
+}
+
+.crop-history-detail-risk-card {
+    background: white;
+    border-radius: 17px;
+    padding: 17px;
+    border-left: 5px solid #f9a825;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.crop-history-detail-risk-high,
+.crop-history-detail-risk-critical {
+    border-left-color: #d32f2f;
+}
+
+.crop-history-detail-risk-medium,
+.crop-history-detail-risk-warning {
+    border-left-color: #f9a825;
+}
+
+.crop-history-detail-risk-low {
+    border-left-color: #2e7d32;
+}
+
+.crop-history-detail-risk-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.crop-history-detail-risk-type {
+    font-size: 17px;
+    font-weight: 800;
+    color: #222;
+}
+
+.crop-history-detail-risk-level {
+    margin-top: 5px;
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 8px;
+    background: #f3f6f2;
+    color: #666;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.crop-history-detail-risk-score {
+    min-width: 60px;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 12px;
+    background: #f7faf6;
+}
+
+.crop-history-detail-risk-score strong {
+    display: block;
+    color: #2e7d32;
+    font-size: 22px;
+}
+
+.crop-history-detail-risk-score small {
+    display: block;
+    margin-top: 2px;
+    color: #777;
+    font-size: 10px;
+}
+
+.crop-history-detail-risk-description {
+    margin: 12px 0 0;
+    color: #555;
+    line-height: 1.55;
+    font-size: 13px;
+}
+
+.crop-history-detail-risk-recommendation {
+    margin-top: 12px;
+    padding: 11px 12px;
+    border-radius: 11px;
+    background: #eef7ec;
+    border: 1px solid #d7ead3;
+}
+
+.crop-history-detail-risk-recommendation strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #2e7d32;
+    font-size: 12px;
+}
+
+.crop-history-detail-risk-recommendation span {
+    color: #555;
+    line-height: 1.5;
+    font-size: 12px;
+}
+
+.crop-history-detail-risk-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 11px;
+    color: #888;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   Fertilizer nutrient grid
+   ========================================================= */
+
+.crop-history-detail-fertilizer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 9px;
+    padding: 14px 17px;
+    border-bottom: 1px solid #edf1eb;
+}
+
+.crop-history-detail-fertilizer-grid > div {
+    background: #f5f9f3;
+    border-radius: 11px;
+    padding: 10px 7px;
+    text-align: center;
+}
+
+.crop-history-detail-fertilizer-grid small {
+    display: block;
+    color: #777;
+    font-size: 10px;
+}
+
+.crop-history-detail-fertilizer-grid strong {
+    display: block;
+    margin-top: 4px;
+    color: #2e7d32;
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   Fertilizer Inputs
+   ========================================================= */
+
+.crop-history-detail-subsection {
+    margin-top: 14px;
+}
+
+.crop-history-detail-subsection h3 {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.crop-history-detail-input-list {
+    display: grid;
+    gap: 10px;
+}
+
+.crop-history-detail-input-card {
+    overflow: hidden;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   Nutrient Balance
+   ========================================================= */
+
+.crop-history-detail-nutrient-card {
+    background: white;
+    border-radius: 17px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    padding: 16px;
+}
+
+.crop-history-detail-nutrient-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.crop-history-detail-nutrient-item {
+    background: #f5f9f3;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.crop-history-detail-nutrient-item small {
+    display: block;
+    color: #777;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.crop-history-detail-nutrient-item strong {
+    display: block;
+    color: #222;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   Current Farm Information
+   ========================================================= */
+
+.crop-history-detail-current-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #eef6ff;
+    border: 1px solid #cddff4;
+    border-radius: 17px;
+    padding: 16px;
+    margin-bottom: 22px;
+}
+
+.crop-history-detail-current-banner-icon {
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.crop-history-detail-current-banner strong {
+    display: block;
+    color: #24517a;
+    font-size: 14px;
+}
+
+.crop-history-detail-current-banner p {
+    margin: 5px 0 0;
+    color: #5f7180;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   Related data status
+   ========================================================= */
+
+.crop-history-detail-related-loading {
+    background: white;
+    border-radius: 15px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    color: #666;
+    text-align: center;
+    font-size: 13px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.crop-history-detail-related-warning {
+    background: #fff8e7;
+    border: 1px solid #edd9a0;
+    color: #765d1d;
+    border-radius: 15px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   Information values
+   ========================================================= */
+
+.crop-history-detail-info-row strong {
+    max-width: 65%;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .crop-history-detail-fertilizer-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .crop-history-detail-nutrient-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .crop-history-detail-risk-top {
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .crop-history-detail-current-banner {
+        padding: 14px;
+    }
+
+    .crop-history-detail-info-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .crop-history-detail-info-row strong {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .crop-history-detail-fertilizer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .crop-history-detail-nutrient-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .crop-history-detail-risk-top {
+        flex-direction: column;
+    }
+
+    .crop-history-detail-risk-score {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+/* =========================================================
+   Weather Risk History
+   ========================================================= */
+
+.crop-history-detail-risk-history {
+    display: grid;
+    gap: 8px;
+}
+
+.crop-history-detail-history-row {
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) 70px minmax(180px, auto);
+    align-items: center;
+    gap: 15px;
+    background: white;
+    border-radius: 13px;
+    padding: 13px 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.crop-history-detail-history-row > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.crop-history-detail-history-row strong {
+    color: #333;
+    font-size: 13px;
+}
+
+.crop-history-detail-history-row span {
+    padding: 3px 7px;
+    background: #f3f5f2;
+    color: #777;
+    border-radius: 7px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.crop-history-detail-history-score {
+    text-align: center;
+    color: #2e7d32;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.crop-history-detail-history-date {
+    text-align: right;
+    color: #888;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   Better active risk styling
+   ========================================================= */
+
+.crop-history-detail-risk-critical {
+    border-left-color: #c62828;
+}
+
+.crop-history-detail-risk-high {
+    border-left-color: #d32f2f;
+}
+
+.crop-history-detail-risk-medium {
+    border-left-color: #f9a825;
+}
+
+.crop-history-detail-risk-low {
+    border-left-color: #2e7d32;
+}
+
+
+@media (max-width: 700px) {
+
+    .crop-history-detail-history-row {
+        grid-template-columns: 1fr auto;
+    }
+
+    .crop-history-detail-history-date {
+        grid-column: 1 / -1;
+        text-align: left;
+    }
+}

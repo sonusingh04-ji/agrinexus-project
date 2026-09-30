@@ -1,0 +1,832 @@
+.lowest-plan-page {
+    min-height: 100vh;
+    background: #f3f8f1;
+    padding: 18px 18px 110px;
+    box-sizing: border-box;
+}
+
+.lowest-plan-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.lowest-plan-back {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #2f7d32;
+    background: white;
+    color: #2f7d32;
+    font-size: 24px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.lowest-plan-back:hover {
+    background: #eef7ec;
+}
+
+.lowest-plan-header h1 {
+    margin: 0;
+    color: #1f5f26;
+    font-size: 28px;
+    line-height: 1.25;
+}
+
+.lowest-plan-header p {
+    margin: 4px 0 0;
+    color: #777;
+    font-size: 15px;
+}
+
+/* =========================================================
+   Sections
+   ========================================================= */
+
+.lowest-plan-section {
+    margin-bottom: 24px;
+}
+
+.lowest-plan-section h2 {
+    margin: 0 0 12px;
+    color: #222;
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+/* =========================================================
+   Common Cards
+   ========================================================= */
+
+.lowest-plan-card,
+.best-crop-card,
+.plan-summary-card,
+.lowest-plan-info-card,
+.lowest-plan-text-card,
+.recommendation-card,
+.ranked-option-card,
+.lowest-plan-disclaimer {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================================
+   Preference Card
+   ========================================================= */
+
+.lowest-plan-card {
+    padding: 19px;
+}
+
+.lowest-plan-card label {
+    display: block;
+    margin: 12px 0 8px;
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.lowest-plan-card label:first-child {
+    margin-top: 0;
+}
+
+/* =========================================================
+   Season Selection
+   ========================================================= */
+
+.choice-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.choice-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* =========================================================
+   Selection Buttons
+   ========================================================= */
+
+.choice-button {
+    border: 1px solid #d8e4d5;
+    background: #f8fbf7;
+    color: #444;
+    border-radius: 12px;
+    padding: 10px 13px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition:
+            background-color 0.18s ease,
+            border-color 0.18s ease,
+            color 0.18s ease,
+            transform 0.18s ease,
+            box-shadow 0.18s ease;
+}
+
+.choice-button:hover {
+    border-color: #2f7d32;
+    background: #f0f8ef;
+    transform: translateY(-1px);
+}
+
+.choice-button:active {
+    transform: translateY(0);
+}
+
+.choice-button.active {
+    border-color: #2f7d32;
+    background: #e9f5e7;
+    color: #2f7d32;
+    font-weight: 700;
+    box-shadow: 0 2px 7px rgba(47, 125, 50, 0.12);
+}
+
+/* Strong visual state for multi-selected options */
+.choice-grid .choice-button.active {
+    position: relative;
+}
+
+.choice-grid .choice-button.active::after {
+    content: "✓";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #2f7d32;
+}
+
+/* =========================================================
+   Selected Constraints
+   ========================================================= */
+
+.selected-constraints {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #f7faf6;
+    border: 1px solid #e3ece0;
+    color: #666;
+    font-size: 12px;
+}
+
+.selected-constraints strong {
+    color: #555;
+    margin-right: 2px;
+}
+
+.selected-constraint {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 9px;
+    border-radius: 10px;
+    background: #e9f5e7;
+    border: 1px solid #cde5c9;
+    color: #2f7d32;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* =========================================================
+   Water Budget Input
+   ========================================================= */
+
+.lowest-plan-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 13px;
+    border: 1px solid #d8ddd6;
+    border-radius: 11px;
+    font-size: 14px;
+    color: #333;
+    background: white;
+    outline: none;
+    transition:
+            border-color 0.18s ease,
+            box-shadow 0.18s ease;
+}
+
+.lowest-plan-input::placeholder {
+    color: #999;
+}
+
+.lowest-plan-input:focus {
+    border-color: #2f7d32;
+    box-shadow: 0 0 0 3px rgba(47, 125, 50, 0.1);
+}
+
+/* =========================================================
+   Soil Compatibility Checkbox
+   ========================================================= */
+
+.soil-check-row {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-top: 14px !important;
+}
+
+.soil-check-row input {
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    accent-color: #2f7d32;
+    cursor: pointer;
+}
+
+.soil-check-row span {
+    line-height: 1.4;
+}
+
+/* =========================================================
+   Evaluate Button
+   ========================================================= */
+
+.evaluate-plan-button {
+    width: 100%;
+    margin-top: 18px;
+    border: none;
+    border-radius: 13px;
+    padding: 14px;
+    min-height: 52px;
+    background: #2f7d32;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition:
+            background-color 0.18s ease,
+            transform 0.18s ease,
+            box-shadow 0.18s ease;
+}
+
+.evaluate-plan-button:hover {
+    background: #27692a;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 13px rgba(47, 125, 50, 0.2);
+}
+
+.evaluate-plan-button:active {
+    background: #1f5723;
+    transform: translateY(0);
+}
+
+.evaluate-plan-button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    transform: none;
+    box-shadow: none;
+}
+
+/* =========================================================
+   Best Crop
+   ========================================================= */
+
+.best-crop-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 21px;
+    border-left: 6px solid #2f7d32;
+}
+
+.best-crop-icon {
+    font-size: 45px;
+    flex-shrink: 0;
+}
+
+.best-crop-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.best-crop-content span {
+    color: #777;
+    font-size: 12px;
+}
+
+.best-crop-content h3 {
+    margin: 3px 0;
+    font-size: 28px;
+    color: #222;
+}
+
+.best-crop-content strong {
+    color: #2f7d32;
+    font-size: 24px;
+}
+
+.best-crop-content small {
+    color: #777;
+    font-size: 11px;
+}
+
+/* =========================================================
+   Summary
+   ========================================================= */
+
+.plan-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.plan-summary-card {
+    padding: 17px;
+}
+
+.plan-summary-card span {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.plan-summary-card strong {
+    display: block;
+    font-size: 22px;
+    color: #222;
+}
+
+.plan-summary-card small {
+    color: #888;
+    font-size: 11px;
+}
+
+/* =========================================================
+   Info
+   ========================================================= */
+
+.lowest-plan-info-card {
+    overflow: hidden;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 17px;
+    border-bottom: 1px solid #edf1eb;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-row span {
+    color: #666;
+    font-size: 13px;
+}
+
+.info-row strong {
+    text-align: right;
+    color: #222;
+    font-size: 13px;
+}
+
+/* =========================================================
+   Text / Recommendation
+   ========================================================= */
+
+.lowest-plan-text-card,
+.recommendation-card {
+    padding: 17px;
+}
+
+.lowest-plan-text-card p,
+.recommendation-card p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.recommendation-card {
+    display: flex;
+    gap: 12px;
+    background: #eef7ec;
+    border: 1px solid #d3e9cf;
+}
+
+.recommendation-card > div {
+    font-size: 27px;
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   Ranked Options
+   ========================================================= */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-header h2 {
+    margin-bottom: 0;
+}
+
+.section-header span {
+    min-width: 27px;
+    height: 27px;
+    padding: 0 7px;
+    display: grid;
+    place-items: center;
+    background: #e7f2e5;
+    color: #2f7d32;
+    border-radius: 18px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.ranked-option-list {
+    display: grid;
+    gap: 11px;
+}
+
+.ranked-option-card {
+    display: flex;
+    gap: 13px;
+    padding: 16px;
+}
+
+.rank-number {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #e9f5e7;
+    color: #2f7d32;
+    font-weight: 800;
+}
+
+.ranked-option-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.ranked-option-content h3 {
+    margin: 0 0 7px;
+    font-size: 19px;
+    color: #222;
+}
+
+.option-tags,
+.option-compatibility {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.option-tags span,
+.option-compatibility span {
+    padding: 4px 8px;
+    border-radius: 8px;
+    background: #f2f6f1;
+    color: #666;
+    font-size: 10px;
+}
+
+.option-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 9px;
+    color: #555;
+    font-size: 11px;
+}
+
+.option-compatibility {
+    margin-top: 8px;
+}
+
+/* =========================================================
+   Disclaimer / Error
+   ========================================================= */
+
+.lowest-plan-error {
+    margin-bottom: 20px;
+    padding: 13px 15px;
+    background: #fff0ef;
+    color: #a42929;
+    border-left: 5px solid #d92f2f;
+    border-radius: 12px;
+    line-height: 1.5;
+    font-size: 13px;
+}
+
+.lowest-plan-disclaimer {
+    padding: 17px;
+    background: #fff9e8;
+    border: 1px solid #f0dfab;
+}
+
+.lowest-plan-disclaimer strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #5e4b18;
+}
+
+.lowest-plan-disclaimer > span {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 8px;
+    background: #eef5ed;
+    color: #2f7d32;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.lowest-plan-disclaimer p {
+    margin: 7px 0 0;
+    color: #6b6250;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   Loading
+   ========================================================= */
+
+.lowest-plan-loading {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.lowest-plan-loading-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.lowest-plan-loading h2 {
+    margin: 0 0 5px;
+    color: #2f7d32;
+}
+
+.lowest-plan-loading p {
+    margin: 0;
+    color: #777;
+}
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .lowest-plan-page {
+        padding: 15px 14px 100px;
+    }
+
+    .lowest-plan-header {
+        gap: 11px;
+        margin-bottom: 20px;
+    }
+
+    .lowest-plan-back {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+
+    .lowest-plan-header h1 {
+        font-size: 23px;
+    }
+
+    .lowest-plan-header p {
+        font-size: 13px;
+    }
+
+    .lowest-plan-section {
+        margin-bottom: 20px;
+    }
+
+    .lowest-plan-section h2 {
+        font-size: 19px;
+    }
+
+    .lowest-plan-card {
+        padding: 16px;
+    }
+
+    .choice-row,
+    .choice-grid {
+        gap: 7px;
+    }
+
+    .choice-button {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+
+    .selected-constraints {
+        padding: 9px 10px;
+        gap: 6px;
+    }
+
+    .best-crop-card {
+        padding: 17px;
+    }
+
+    .best-crop-icon {
+        font-size: 38px;
+    }
+
+    .best-crop-content h3 {
+        font-size: 24px;
+    }
+
+    .plan-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-row {
+        align-items: flex-start;
+        padding: 13px 15px;
+    }
+
+    .info-row strong {
+        max-width: 55%;
+    }
+
+    .ranked-option-card {
+        padding: 14px;
+    }
+}
+/* =========================================================
+   CURRENT FARM CARD
+   ========================================================= */
+
+.lowest-plan-farm-card {
+    width: min(700px, 100%);
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 15px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dfe9dd;
+    border-radius: 16px;
+
+    background: #f8fbf7;
+
+    box-shadow:
+            0 5px 18px rgba(40, 70, 45, 0.05);
+}
+
+.lowest-plan-farm-card > span {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eaf4e8;
+
+    font-size: 18px;
+}
+
+.lowest-plan-farm-card small {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #819083;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.lowest-plan-farm-card strong {
+    display: block;
+
+    color: #2d3c30;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   LOADING SPINNER
+   ========================================================= */
+
+.lowest-plan-spinner {
+    width: 25px;
+    height: 25px;
+
+    margin-top: 18px;
+
+    border: 3px solid #dce8db;
+    border-top-color: #5f8b65;
+
+    border-radius: 50%;
+
+    animation: lowestPlanSpin 0.8s linear infinite;
+}
+
+@keyframes lowestPlanSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.lowest-plan-error {
+    width: min(700px, 100%);
+    margin: 0 auto 18px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #efd3c1;
+    border-radius: 15px;
+
+    background: #fff7f2;
+
+    color: #7c4828;
+}
+
+.lowest-plan-error span {
+    font-size: 18px;
+}
+
+.lowest-plan-error p {
+    margin: 1px 0 0;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   COMPATIBILITY TAGS
+   ========================================================= */
+
+.option-tags .tag-positive {
+    background: #edf7ed;
+    color: #4d7953;
+}
+
+.option-tags .tag-negative {
+    background: #fff0eb;
+    color: #9a5941;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .lowest-plan-farm-card {
+        margin-bottom: 14px;
+        padding: 11px 12px;
+    }
+
+    .lowest-plan-farm-card > span {
+        width: 34px;
+        height: 34px;
+    }
+
+}
